@@ -1,10 +1,13 @@
+//Author: Gabriel Caballero
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
 //prototypes:
-
+void fillWith(vector<int>& New, int);
+void printVector(const vector<int>);
+bool isPositive(int);
 
 /////DO NOT TOUCH/////
 int main()
@@ -42,3 +45,32 @@ int main()
 }
 
 //function definitions
+
+void fillWith (vector<int> & New, int Nums)
+{
+    for(int i=0; i<New.size(); i++)
+    {
+        New[i] = Nums;
+    }
+    return;
+}
+
+void printVector(const vector<int> New1)
+{
+    for(int i=0; i<New1.size(); i++)
+    {
+        cout<<New1[i]<<" ";
+    }
+}
+
+bool isPositive(int Num)
+{
+    if( Num>0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
